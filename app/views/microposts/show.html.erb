@@ -1,0 +1,28 @@
+<table border="1">
+
+<font color="green"><%= notice %></font>
+  <tr bgcolor="black">
+    <td>
+  <b><font color="white">Content:</font></b>
+    </td>
+    <td>
+ <b><font color="white">User:</font></b>
+
+</td>
+ <td>
+  <b><font color="white">Action:</font></b>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <font color="black"> <%= @micropost.content %></font>
+    </td>
+     <td>
+       <font color="black"> <%= @micropost.user_id %></font>
+    </td>
+    <td bgcolor="black">
+<%= link_to 'Edit', edit_micropost_path(@micropost) %> <font color="white"><b> | </b></font>
+<%= link_to 'Back', microposts_path %>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag :all %>
+  <%#= render 'layouts/stylesheets' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+  
+</head>
+<body>
+  <table border="1">
+    <tr bgcolor="black">
+      <%= image_tag("logo.png", :alt => "Sample App", :height => 50, :width => 140) %>
+      <td><font color="white"><%= link_to "Home", :controller => "users", :action => "new" %></td>
+      <td><font color="white"><%= link_to "Create", :controller => "users", :action => "create" %></td>
+      <td><font color="white"><%= link_to "Login", :controller => "sessions", :action => "new" %></td>
+      <td><font color="white"><%= link_to "Logout", :controller => "sessions", :action => "signout" %></td>
+      <td><font color="white"><%= link_to "Pages", :controller => "pages", :action => "home" %></td>
+       
+      
+    </tr>
+  </table>
+<h3><%= @title %> Page</h3>
+Hi! You are in  <font color ="red"><%= @title  %> Page</font>
+<p>
+<ol>
+  <li>
+    Welcome to the world of Ruby on Rails....</li><br />
+  <li>For more details please visit: <a href="http://railstutorial.org/help"><font color="red">Rails Tutorial help page</font></a>.</li>
+<br /> <li> To get help on this sample app, please see the
+<a href="http://railstutorial.org/book"><font color="red">Rails Tutorial book</font></a>.</li>
+  </ol>
+  </p>
+<%= yield %>
+
+</body>
+</html>
+<%#*<!DOCTYPE html>%>
+<%#*<html>%>
+  <%#*<head>%>
+    <%#*<title><%= title %>
+    <%#= csrf_meta_tag %>
+    <%#*<!--[if lt IE 9]>%>
+    <%#*<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>%>
+    <%#*<![endif]-->%>
+    <%#= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%#= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+    <%#*<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %>
+    <%#= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <%#= javascript_include_tag :defaults %>
+  <%#*</head>%>
+  <%#*<body>%>
+    <%#*<div class="container">%>
+      <%#*<header>%>
+        <%#= image_tag("rails.png", :alt => "Sample App", :class => "round") %>
+        <%#*<nav class="round">%>
+          <%#*<ul>%>
+            <%#*<li><%= link_to "Home", '#' %>
+            <%#*<li><%= link_to "Help", '#' %>
+            <%#*<li><%= link_to "Sign in", '#' %>
+          <%#*</ul>%>
+        <%#*</nav>%>
+      <%#*</header>%>
+      <%#*<section class="round">%>
+        <%#= yield %>
+      <%#*</section>%>
+    <%#*</div>%>
+  <%#*</body>%>
+<%#*</html>%>

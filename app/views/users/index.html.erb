@@ -1,0 +1,62 @@
+
+<table class="user_list" cellpadding="0" cellspacing="0">
+  <tr>
+     <td colspan="18"> <font color = "white"><b>
+       <div class="btm_class2"><%= will_paginate %></div></b>
+     <div class="btm_class1">
+       <div class="top_class1"><font color = "white"><b>REGISTERED USERS</b></font></div>
+     </div>
+ </td>
+  </tr>
+  <tr>
+    <%#*<th>Image</th>%>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>E Mail</th>
+    <th>User Name</th>
+    <th>Present Address</th>
+    <th>Permanent Address</th>
+    <th>Date of Birth</th>
+    <th>Marital Status</th>
+    <th>Contact Number</th>
+
+    <th colspan="3">Action</th>
+  </tr>
+
+<%#= will_paginate %>
+<%#=will_paginate @users ,:params => { :controller => 'users', :action => 'index'}%>
+
+
+  <%#= will_paginate %>
+
+  <% @users.each do |user| %>
+
+    <tr class="user_data">
+     <%#= image_tag @user.avatar.url(:medium) %>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.user_name %></td>
+      <td><%= user.present_add %></td>
+      <td><%= user.permanent_add %></td>
+      <td><%= user.date_of_birth %></td>
+      <td><%= user.marital_status %></td>
+      <td><%= user.mobile_number %></td>
+      <td class="links"><%= link_to 'Show', user %></td>
+      <td class="links"><%= link_to 'Edit', edit_user_path(user) %></td>
+      <td class="links"><%= link_to 'Destroy', user, :confirm => 'Are you sure to delete this user permanently...?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  <tr>
+
+ <td colspan ="18"> <font color = "white"><b>
+       <div class="btm_class2"><%= link_to 'New User', new_user_path %></div></b>
+     <div class="btm_class1">
+       <div class="btm_class4"><font color = "white"><b>Number of Users Registered : <%= @users.count %></b></font></div>
+       <div class="btm_class5"><font color = "white"><b>Count : <%= @users.total_entries %></b></font></div>
+     </div>
+ </td>
+  </tr>
+
+</table>
+  <%#= will_paginate %>

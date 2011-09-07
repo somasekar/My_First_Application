@@ -1,0 +1,86 @@
+<%= form_for(@user) do |f| %>
+  <%= render :partial => "shared/error_messages" %>
+<table border="1">
+  <tr bgcolor="black">
+     <td bgcolor="black" colspan="2"><font color="white"><b><center><%= f.label "REGISTERATION FORM" %></center></b></font></td>
+  </tr>
+  <tr>
+  
+    <td bgcolor="black"><font color="white"><b><%= f.label :first_name %></b></font></td>
+    <td><%= f.text_field :first_name %></td>
+   
+  </tr>
+  <tr>
+
+    <td bgcolor="black"> <font color="white"><b><%= f.label :last_name %></b></font></td>
+    <td><%= f.text_field :last_name %></td>
+
+  </tr>
+  <tr>
+
+    <td bgcolor="black"><font color="white"><b> <%= f.label :email %></b></font></td>
+    <td><%= f.text_field :email %></td>
+
+  </tr>
+
+  <tr>
+
+    <td bgcolor="black"> <font color="white"><b><%= f.label :user_name %></b></font></td>
+    <td><%= f.text_field :user_name %></td>
+
+  </tr>
+  <tr>
+
+    <td bgcolor="black"><font color="white"> <b><%= f.label :password %></b></font></td>
+    <td><%= f.password_field :password %></td>
+
+  </tr>
+  <tr>
+
+    <td bgcolor="black"> <font color="white"><div class="field_with_errors"><b><%= f.label :confirm_password %></b></div></font></td>
+    <td><%= f.password_field :password_confirmation %></td>
+
+  </tr>
+  <tr>
+  <div class="field_with_errors">
+    <td bgcolor="black"><font color="white">  <div class="field_with_errors"><b><%= f.label :present_address %></b></div></font></td>
+    <td><%= f.text_area :present_add, :cols=>34,:rows=>3 %></td>
+  </div>
+  
+  </tr>
+  <tr>
+
+    <td bgcolor="black"><font color="white">  <div class="field_with_errors"><b><%= f.label :permanent_address %></b></div></font></td>
+    <td><%= f.text_area :permanent_add, :cols=>34,:rows=>3 %></td>
+  </div>
+  </tr>
+  <tr>
+
+  <td bgcolor="black"><font color="white"><div class="field_with_errors"><b><%= f.label :date_of_birth %></b></div></font></td>
+    <td>
+    <%= date_select("user", "date_of_birth", :order => [:day, :month, :year], :include_blank => false )%>
+
+    </td>
+
+  </tr>
+
+    <tr>
+  <td bgcolor="black"><font color="white"><b><%= f.label :marital_status %></b></font></td>
+    <td>Married<%= f.radio_button(:marital_status, "Married") %>Unmarried<%= f.radio_button(:marital_status, "Unmarried") %></td>
+  </tr>
+  <tr>
+
+    <td bgcolor="black"> <font color="white"><div class="field_with_errors"><b><%= f.label :Mobile_number %></b></div></font></td>
+    <td><%= f.text_field :mobile_number %></td>
+
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="black">
+      <center>
+   <%= f.submit %></font>
+   <%= submit_tag("Reset", { :name => 'reset', :id => 'reset_button', :type => "reset" }) %>
+      </center>
+  </td>
+  </tr>
+</table>
+<% end %>

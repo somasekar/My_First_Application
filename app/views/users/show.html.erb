@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<table border="1">
+  <tr bgcolor="black">
+    <td colspan="2">
+      <center> <b><font color="white">USER INFORMATION</font></b></center>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="black"><b><font color="white">First Name</font></b></td>
+  <td><%= @user.first_name %></td>
+  </tr>
+  <tr>
+    <td bgcolor="black"><b><font color="white">Last Name</font></b></td>
+    <td> <%= @user.last_name %></td>
+  </tr>
+   <tr>
+    <td bgcolor="black"><b><font color="white">E Mail</font></b></td>
+    <td> <%= @user.email %></td>
+  </tr>
+   <tr>
+    <td bgcolor="black"><b><font color="white">User Name</font></b></td>
+    <td> <%= @user.user_name %></td>
+  </tr>
+  <tr>
+    <td bgcolor="black"><b><font color="white">Present Address</font></b></td>
+    <td> <%= @user.present_add %></td>
+  </tr>
+  <tr>
+    <td bgcolor="black"><b><font color="white">Permanent Address</font></b></td>
+    <td> <%= @user.permanent_add %></td>
+  </tr>
+    <tr>
+   <td bgcolor="black"><b><font color="white">Date of Birth</font></b></td>
+    <td> <%= @user.date_of_birth %></td>
+  </tr>
+    <tr>
+ <td bgcolor="black"><b><font color="white">Marital Status</font></b></td>
+    <td> <%= @user.marital_status %></td>
+  </tr>
+  <tr>
+    <td bgcolor="black"><b><font color="white">Mobile Number</font></b></td>
+    <td> <%= @user.mobile_number %></td>
+  </tr>
+  <tr>
+    <td bgcolor="black"><b><font color="white">Action</font></b></td>
+    <td bgcolor="black"><%= link_to 'Edit', edit_user_path(@user) %><font color="white"> |</font>
+<%= link_to 'Back', users_path %></td>
+  </tr>
+</table>
+
+
+
