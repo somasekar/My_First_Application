@@ -1,5 +1,16 @@
 == Welcome to Rails
 
+== Introduction
+
+1) Use Ruby for Programming in Rails Application.
+2) Ruby is nothing but it is a Programming Language as like C, C++
+3) We can develop any type of Softwares with this programming Language.
+4) The main difference in Ruby when compare to other programming languages is it is an interpreting language and not the compiler specific Language.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+**************               For more details please visit http://www.sumeruonrails.com*****************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
 
