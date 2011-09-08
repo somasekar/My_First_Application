@@ -15,8 +15,8 @@ class UsersController < ApplicationController
     #              :order => "DLXDAT desc"
 
     @title = "Index"
-    #    @users = User.all
-    @users = User.paginate(:page => params[:page], :per_page => 3)
+    @users = User.all
+    @users = @users.paginate(:page => params[:page], :per_page => 3)
 
 
     #    respond_to do |format|
